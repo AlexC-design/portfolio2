@@ -1,0 +1,172 @@
+@import "../../../scss/variables.scss";
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: color(secondary);
+  width: calc(100% - 140px);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 70px;
+  z-index: 20;
+
+  transition: all 0.2s ease-out;
+  * {
+    transition: all 0.2s ease-out;
+  }
+
+  :first-child {
+    margin-right: auto !important;
+  }
+
+  .nav-link {
+    position: relative;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    margin: 0 20px;
+    cursor: pointer;
+    
+    transition: all 0s linear, font-weight 0s linear;
+
+    &.active {
+      font-weight: bold;
+    }
+
+    .text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .triangle {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+      transform: scale(0);
+
+      img {
+        filter: $toBlue;
+        width: 20px;
+      }
+    }
+  }
+
+  &.small {
+    height: 50px;
+    opacity: 0.95;
+  }
+
+  &.smaller {
+    height: 40px;
+    background-color: rgba(color(secondary), 0.5);
+  }
+
+  .burger-menu {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+
+    padding: 10px 15px;
+    cursor: pointer;
+
+    * {
+      transition: all 0.2s $cbInOut;
+    }
+
+    .line {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+      border-radius: 10px;
+    }
+
+    &.open {
+      .line {
+        &:nth-child(1) {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          margin-top: -8px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  @include width850 {
+    width: calc(100% - 60px);
+    padding: 0 30px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 0px !important;
+    opacity: 1 !important;
+    background-color: color(secondary) !important;
+    padding-top: 50px;
+
+    .burger-menu {
+      display: block;
+    }
+
+    .nav-link {
+      margin: 10px 0 20px !important;
+      opacity: 0;
+      pointer-events: none;
+      &:first-child {
+        margin-top: 40px !important;
+      }
+    }
+
+    &.open {
+      height: 250px !important;
+      opacity: 1 !important;
+
+      .nav-link {
+        opacity: 1;
+        pointer-events: all;
+
+        transition: all 0.2s 0.2s ease-in, font-weight 0s linear !important;
+      }
+    }
+  }
+
+  @include width576 {
+    .burger-menu {
+      right: 0px;
+      .line {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.mobile-cover {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(color(main), 0.9);
+
+  display: none;
+
+  @include width850 {
+    &.show {
+      display: block;
+    }
+  }
+}

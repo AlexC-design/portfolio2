@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store/configureStore";
+import { LastLocationProvider } from "react-router-last-location";
+import Navbar from "./components/Navbar/Navbar";
+import Routes from "./components/Routes";
+import ScrollingTriangles from "./components/ScrollingTriangles/ScrollingTriangles";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <HashRouter basename="/">
+          <LastLocationProvider>
+            <ScrollingTriangles />
+            <Navbar />
+            <Routes />
+          </LastLocationProvider>
+        </HashRouter>
+      </div>
+    </Provider>
   );
 }
 

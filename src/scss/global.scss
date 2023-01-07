@@ -1,0 +1,247 @@
+@import "./variables.scss";
+
+html {
+  font-family: $main-font;
+  text-align: center;
+  font-size: 18px;
+  overflow-x: hidden;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body {
+  background-color: color(main);
+  color: white;
+}
+
+.page {
+}
+
+.container {
+  padding: 100px 50px;
+  margin: 0 auto;
+  max-width: 1900px;
+
+  @include width1337 {
+    padding: 100px 50px;
+  }
+  @include width850 {
+    padding: 100px 20px;
+  }
+}
+
+a {
+  font-weight: bold;
+  color: color(accent);
+
+  transition: all 0.1s linear !important;
+
+  &:hover {
+    filter: brightness(200%);
+    text-shadow: 0 0 5px rgba(white, 0.5);
+  }
+
+  &:active {
+    filter: brightness(150%);
+  }
+}
+
+.primary-link {
+  font-size: 1.1em;
+}
+
+.secondary-link {
+  font-weight: normal;
+  color: rgba(white, 0.7);
+  &:hover {
+    color: white;
+  }
+}
+
+// ============= TEXT =============
+
+.accent-color {
+  color: color(accent);
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-small {
+  font-size: 0.6em;
+}
+.text-medium {
+  font-size: 0.8em;
+}
+.text-large {
+  font-size: 1.2em;
+}
+.text-thin {
+  font-weight: 200;
+}
+.title {
+  margin: 50px 0 100px;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.separator {
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+}
+.hide-mobile {
+  @include width1200 {
+    display: none;
+  }
+}
+.show-mobile {
+  display: none;
+  @include width1200 {
+    display: block;
+  }
+}
+.faded {
+  opacity: 0.7;
+}
+
+.CTA {
+  margin: 40px auto 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: $main-font;
+  color: color(secondary);
+  background-color: color(accent);
+  cursor: pointer;
+  box-shadow: 0px 0px 50px -10px color(accent);
+}
+// ============= SPACING =============
+.mb {
+  margin-bottom: 20px !important;
+}
+.mt {
+  margin-top: 20px !important;
+}
+.my {
+  margin: 20px 0 !important;
+}
+
+// ============= SIMPLEBAR =============
+
+.simplebar-track.simplebar-vertical {
+  overflow: visible;
+  height: 96%;
+  top: 2%;
+  right: 3px;
+
+  .simplebar-scrollbar {
+    transition: all 0s linear !important;
+    overflow: visible;
+    opacity: 0.7;
+
+    &:before {
+      background-color: color(accent);
+      opacity: 1;
+      width: 5px;
+    }
+  }
+}
+
+.text-container {
+  .simplebar-track.simplebar-vertical {
+    right: 10px;
+  }
+}
+
+// ============= ANIMATIONS =============
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+.spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pop-in {
+  animation: pop-in 0.4s $cbOut forwards;
+}
+.pop-in-delayed {
+  animation: pop-in 0.4s 0.8s $cbOut forwards;
+}
+
+.fade-in {
+  animation: fade-in 2s $cbOut forwards;
+}
+
+.fade-in-delayed {
+  animation: fade-in 0.4s 0.4s ease-out forwards;
+}
+
+.fade-in-absolute {
+  animation: fade-in-absolute 0.4s $cbOut forwards;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-absolute {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.link-animation {
+  transform-origin: left;
+  animation: link-animation 0.4s 0.5s ease-out forwards;
+}
+
+@keyframes link-animation {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
