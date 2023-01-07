@@ -7,13 +7,12 @@ const AboutPage = () => {
   const codeTools = [
     "React",
     "Redux",
+    "Typescript",
     "Storybook",
     "styled-components",
     "GraphQL",
     "Apollo",
     "knex",
-    "redux-thunk",
-    "Vue",
     "SASS",
     "VSCode",
     "Git"
