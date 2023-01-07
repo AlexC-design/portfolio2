@@ -9,10 +9,11 @@ const AboutPage = () => {
     "Redux",
     "Typescript",
     "Storybook",
-    "styled-components",
+    "Styled Components",
     "GraphQL",
     "Apollo",
-    "knex",
+    "Knex",
+    "VueJS",
     "SASS",
     "VSCode",
     "Git"
