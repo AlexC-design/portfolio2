@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="text text-left">
-        <h2 className="text-bold">Alexandru Ciobotaru</h2>
+        <h2 className="text-bold">Alex Ciobotaru</h2>
         <div>
           <span className="accent-color">(UK)</span> 07432 703 853
         </div>
@@ -24,7 +24,7 @@ const Footer = () => {
         </a>
         <a
           className="link-icon"
-          href="https://www.linkedin.com/in/alexandru-ciobotaru-655777193/"
+          href="https://www.linkedin.com/in/alex-ciobotaru-655777193/"
           target="_blank"
           rel="noopener noreferrer"
         >

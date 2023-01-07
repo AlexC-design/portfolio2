@@ -11,7 +11,7 @@ const HomePage = () => {
       <div className="container">
         <div className="top-section">
           <div className="description text-left">
-            <h1 className="my-name">Alexandru Ciobotaru</h1>
+            <h1 className="my-name">Alex Ciobotaru</h1>
             <h3 className="accent-color">Web Developer and Designer</h3>
             <br />
             <p>
@@ -32,7 +32,7 @@ const HomePage = () => {
         <h1 className="title">Projects</h1>
 
         <div className="projects-container">
-          {projects.map(project => {
+          {projects.map((project) => {
             return (
               <ProjectCard
                 img={`https://omperiap.sirv.com/portfolio/tmbs/${project.name}.jpg`}

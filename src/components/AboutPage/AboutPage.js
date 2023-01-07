@@ -5,26 +5,26 @@ import "./css/about-page.css";
 
 const AboutPage = () => {
   const codeTools = [
-    "Redux-Thunk",
-    "Redux-Sagas",
-    "React-Router",
+    "React",
+    "Redux",
+    "Storybook",
+    "styled-components",
+    "GraphQL",
+    "Apollo",
+    "knex",
+    "redux-thunk",
     "Vue",
-    "Vuex",
-    "Boostrap",
     "SASS",
-    "LESS",
-    "Axios",
-    "OAuth 2.0",
     "VSCode",
     "Git"
   ];
 
   const designTools = [
-    "Adobe InDesign",
+    "Figma",
+    "Photoshop",
+    "Illustrator",
+    "Lighroom",
     "Blender 3D",
-    "Spine 2D",
-    "ZBrush",
-    "Unity 3D",
     "Unreal Engine 4"
   ];
 
@@ -44,24 +44,23 @@ const AboutPage = () => {
             alt=""
           />
           <div className="about-text">
-            <h1 className="my-name text-bold">Alexandru Ciobotaru</h1>
+            <h1 className="my-name text-bold">Alex Ciobotaru</h1>
             <p className="subtitle">Web Developer and Designer</p>
             <br />
             <p>
-              I'm Alex, a Web Developer with a background in Digital Art and
-              Design.
+              I'm Alex, a Front End Developer with a background in Digital Art
+              and Design.
             </p>
             <br />
             <p>
-              I have been working as a concept artist and illustrator in the
-              video game industry for 4 years before moving into web
-              development.
+              I have been working as a freelance concept artist, illustrator and
+              graphic designer for 5 years before moving into web development.
             </p>
             <br />
             <p>
               I've studied Computer Science at the University of Bucharest, and
-              I have been focusing mainly on Web Technologies and Frameworks for the
-              last two years.
+              I have been focusing on Web Technologies and Frameworks for the
+              last 3+ years.
             </p>
             <br />
             <p>
@@ -97,14 +96,14 @@ const AboutPage = () => {
             <br />
             <div className="cols">
               <div className="col-1">
-                {codeTools.slice(0, codeTools.length / 2).map(tool => (
+                {codeTools.slice(0, codeTools.length / 2).map((tool) => (
                   <p key={`${tool}`}>{tool}</p>
                 ))}
               </div>
               <div className="col-2">
                 {codeTools
                   .slice(codeTools.length / 2, codeTools.length)
-                  .map(tool => (
+                  .map((tool) => (
                     <p key={`${tool}`}>{tool}</p>
                   ))}
               </div>
@@ -114,7 +113,7 @@ const AboutPage = () => {
             <h2 className="text-bold accent-color">Design</h2>
             <br />
             <br />
-            {designTools.map(tool => (
+            {designTools.map((tool) => (
               <p key={`${tool}`}>{tool}</p>
             ))}
           </div>

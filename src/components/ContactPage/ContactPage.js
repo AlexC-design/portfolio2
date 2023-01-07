@@ -8,7 +8,7 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       <div className="text">
-        <h2 className="text-bold">Alexandru Ciobotaru</h2>
+        <h2 className="text-bold">Alex Ciobotaru</h2>
         <div className="text-left">
           <span className="text-bold text-medium accent-color">Phone </span>
           07432 703 853
@@ -29,7 +29,7 @@ const ContactPage = () => {
         </a>
         <a
           className="link-icon"
-          href="https://www.linkedin.com/in/alexandru-ciobotaru-655777193/"
+          href="https://www.linkedin.com/in/alex-ciobotaru-655777193/"
           target="_blank"
           rel="noopener noreferrer"
         >
